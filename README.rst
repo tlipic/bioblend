@@ -29,6 +29,10 @@ via Galaxy. In reality, it makes it possible to do things like this:
     gi.workflows.show_workflow('workflow ID')
     gi.workflows.run_workflow('workflow ID', input_dataset_map)
 
+- Enable CloudMan’s auto-scaling feature, which will keep the size of the compute infrastructure proportional to the given workload::
+	
+	cmi.enable_autoscaling(min_nodes=0, max_nodes=10)
+
 .. note::
     Although this library allows you to blend these two services into a cohesive unit,
     the library itself can be used with any single service irrespective of the other. For
@@ -39,3 +43,4 @@ via Galaxy. In reality, it makes it possible to do things like this:
 .. _CloudMan: http://usecloudman.org/
 .. _Galaxy: http://usegalaxy.org/
 .. _Git repository: https://github.com/afgane/bioblend
+.. BioBlend: automating pipeline analyses within Galaxy and CloudMan: http://bib.irb.hr/datoteka/627609.PUBLISHED_BioBlend.pdf
